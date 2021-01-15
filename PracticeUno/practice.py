@@ -1,5 +1,5 @@
-def verificacionNotas(calificacion):
 
+def verificacionNotas(calificacion):
     if calificacion > 75:
         return 'O'
     elif calificacion >= 60 and calificacion <= 75:
