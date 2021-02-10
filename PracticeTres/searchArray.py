@@ -27,6 +27,10 @@ def binary(arr, l, r, x):
             r = mid - 1
     return False
 
+@app.route('/')
+def instructions():
+    return "INGESE EN LA RUTA DEL LINK, LA MANERA DE SEARCH QUE DESEA, LA CANTIDAD DE ELEMENTOS DEL ARRAY Y EL VALOR QUE DESEA BUSCAR.\nejemplo: /binary/57/2/"
+
 @app.route('/linear/<int:array>/<int:num>/')
 def linearSearch(array, num):
     elementos = randomArr(array)
