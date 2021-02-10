@@ -31,7 +31,7 @@ def binary(arr, l, r, x):
 def instructions():
     return "INGESE EN LA RUTA DEL LINK, LA MANERA DE SEARCH QUE DESEA, LA CANTIDAD DE ELEMENTOS DEL ARRAY Y EL VALOR QUE DESEA BUSCAR.\nejemplo: /binary/57/2/"
 
-@app.route('/linear/<int:array>/<int:num>/')
+@app.route('/linear/<int:array>/<int:num>/', methods = ['GET'])
 def linearSearch(array, num):
     elementos = randomArr(array)
     if (linear(elementos, num)) == True:
@@ -39,7 +39,7 @@ def linearSearch(array, num):
     else:
         return 'no se ha hallado el valor en el arreglo\n'
 
-@app.route('/binary/<int:array>/<int:num>/')
+@app.route('/binary/<int:array>/<int:num>/', methods = ['GET'])
 def binarySearch(array, num):
     elementos = randomArr(array)
     if (binary(elementos, 0, len(elementos)-1, num)) == True:
